@@ -20,10 +20,10 @@
 <br />
 
 <!-- Screenshots -->
-<!-- Add your screenshots here -->
-<!-- ![Dynamic Island Demo](assets/demo.gif) -->
-<!-- ![Media Widget](assets/media.png) -->
-<!-- ![System Monitor](assets/system.png) -->
+<!-- Add your screenshots here (see screenshots/README.md for the capture list) -->
+<!-- ![Compact Pill](screenshots/compact.png) -->
+<!-- ![Media Widget](screenshots/media.png) -->
+<!-- ![System Monitor](screenshots/system.png) -->
 
 </div>
 
@@ -82,7 +82,7 @@
 - [Node.js](https://nodejs.org/) 18+
 - [Rust](https://rustup.rs/) 1.70+
 - [pnpm](https://pnpm.io/) 8+
-- Linux: `webkit2gtk` and `rsvg2` libraries
+- Linux: `webkit2gtk` and `librsvg` libraries
 - Windows: WebView2 (usually pre-installed)
 
 ### Linux Dependencies
@@ -164,28 +164,26 @@ dynamic-island/
 
 ---
 
-## Keyboard Shortcuts
+## Controls
 
-| Shortcut | Action |
-|----------|--------|
-| `Hover` | Expand island |
-| `Click widget icon` | Switch active widget |
-| `Escape` | Collapse island |
-| `Space` (media) | Play/Pause |
+| Action | Result |
+|--------|--------|
+| Hover | Expand island |
+| Click widget icon | Switch active widget |
+| `Enter` (island focused) | Toggle expand/collapse |
+| Move mouse away | Auto-collapse after 2 seconds |
 
 ---
 
 ## Customization
 
-The anime theme is built with CSS custom properties. Override them in your config:
+The theme colors live directly in the component styles under `src/lib/components/`. To reskin the island, search and replace the palette:
 
-```css
---island-bg: rgba(26, 10, 46, 0.85);
---neon-pink: #ff2d95;
---neon-cyan: #00f0ff;
---sakura: #ffb7c5;
---glow-intensity: 0.8;
-```
+| Color | Hex |
+|-------|-----|
+| Neon pink | `#ff2d95` |
+| Neon cyan | `#00f0ff` |
+| Sakura | `#ffb7c5` |
 
 ---
 
